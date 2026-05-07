@@ -13,7 +13,7 @@ conn = psycopg2.connect(
     port="5432",
     database="postgres",
     user="postgres",
-    password=password="matabaako00550208"
+    password="matabaako00550208"
 )
 
 # TITLE
