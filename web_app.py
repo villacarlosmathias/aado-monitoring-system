@@ -58,6 +58,30 @@ col4.metric("Sports Events", sports_count)
 
 st.markdown("---")
 
+st.subheader("Add Student")
+
+with st.form("add_student_form"):
+    student_id = st.text_input("Student ID")
+    name = st.text_input("Full Name")
+    grade = st.text_input("Grade")
+    section = st.text_input("Section")
+    strand = st.text_input("Strand")
+    sport = st.text_input("Sport")
+    status = st.selectbox("Status", ["Active", "Inactive"])
+
+    submitted = st.form_submit_button("Save Student")
+
+    if submitted:
+        cursor.execute("""
+            INSERT INTO student_athlete
+            (student_number, full_name, grade_level, section, strand, sports_events, status)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """, (student_id, name, grade, section, strand, sport, status))
+
+        conn.commit()
+        st.success("Student added successfully!")
+        st.rerun()
+
 # STUDENT TABLE
 st.subheader("Student-Athlete Records")
 
