@@ -9,11 +9,11 @@ st.set_page_config(
 
 # DATABASE CONNECTION
 conn = psycopg2.connect(
-    host="localhost",
-    port="5433",
-    database="aado_monitoring_db",
+    host="db.hbhyzahelupehbahjluk.supabase.co",
+    port="5432",
+    database="postgres",
     user="postgres",
-    password="your_new_password"
+    password="ILAGAY_DITO_SUPABASE_PASSWORD_MO"
 )
 
 # TITLE
