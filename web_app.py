@@ -9,11 +9,12 @@ st.set_page_config(
 
 # DATABASE CONNECTION
 conn = psycopg2.connect(
-    host="db.hbhyzahelupehbahjluk.supabase.co",
-    port="5432",
+    host="aws-1-ap-southeast-2.pooler.supabase.com",
+    port="6543",
     database="postgres",
-    user="postgres",
-    password="matabaako00550208"
+    user="postgres.hbhyzahelupehbahjluk",
+    password="matabaako00550208",
+    sslmode="require"
 )
 
 # TITLE
